@@ -78,7 +78,7 @@ export type SampleSite = {
   size?: number;
 };
 
-const img = (slug: string) => `/images/samples/${slug}.jpg`;
+const img = (slug: string) => `/images/covers/${slug}.jpg`;
 
 export const SAMPLES: SampleSite[] = [
   /* ── Café ── */
@@ -90,7 +90,7 @@ export const SAMPLES: SampleSite[] = [
     kind: "Specialty café",
     style: "Warm & editorial",
     highlights: ["One-page website", "Menu with prices", "Photo gallery", "WhatsApp + Google Maps"],
-    ready: false,
+    ready: true,
     domain: "brewlane.in",
     eyebrow: "Specialty coffee · Vijay Nagar",
     headline: ["Slow coffee,", "fast smiles."],
@@ -114,7 +114,7 @@ export const SAMPLES: SampleSite[] = [
     kind: "Chai café",
     style: "Desi & bold",
     highlights: ["Up to 4 pages", "Menu with category filters", "Reviews + Instagram grid", "Scroll animations"],
-    ready: false,
+    ready: true,
     domain: "kulhadco.in",
     eyebrow: "Chai · Snacks · Evening adda",
     headline: ["Kadak chai,", "zero drama."],
@@ -139,7 +139,7 @@ export const SAMPLES: SampleSite[] = [
     kind: "Fine-dine restaurant",
     style: "Dark & luxurious",
     highlights: ["Up to 6 pages", "Order-on-WhatsApp cart", "Table reservations", "Premium motion + SEO"],
-    ready: false,
+    ready: true,
     domain: "emberbistro.in",
     eyebrow: "Modern Indian · Dinner from 7 pm",
     headline: ["Fire, flavour", "& slow evenings."],

@@ -261,8 +261,8 @@ function Bubble({ m }: { m: Msg }) {
       <div className={`${base} w-[86%] p-1.5`}>
         <div className="grid grid-cols-2 gap-1">
           {[
-            ["/images/samples/wa-croissant.jpg", "Croissant", "₹140"],
-            ["/images/samples/wa-latte.jpg", "Cappuccino", "₹180"],
+            ["/images/landing/wa-croissant.jpg", "Croissant", "₹140"],
+            ["/images/landing/wa-latte.jpg", "Cappuccino", "₹180"],
           ].map(([src, name, price]) => (
             <div key={name} className="overflow-hidden rounded-md bg-[#111B21]">
               <div className="relative aspect-square">

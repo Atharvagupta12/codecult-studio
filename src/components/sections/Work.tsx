@@ -156,6 +156,12 @@ function SampleCard({ s }: { s: SampleSite }) {
               <ArrowUpRightIcon className="size-3.5" />
             </span>
           </div>
+          {s.ready && <a href={`/samples/${s.slug}`} aria-label={`Open the ${s.name} live demo`} className="absolute inset-0 z-10" />}
+          {s.ready && (
+            <span className="absolute bottom-3 right-3 flex items-center gap-1.5 rounded-full bg-ink/80 px-2.5 py-1 font-mono text-[10px] uppercase tracking-[0.12em] text-cream backdrop-blur lg:hidden">
+              <span className="size-1.5 animate-pulse rounded-full bg-wa" /> Live demo
+            </span>
+          )}
         </div>
       </div>
 
@@ -197,7 +203,9 @@ function SampleCard({ s }: { s: SampleSite }) {
             rel="noopener"
             className="group/btn relative flex h-12 flex-1 items-center justify-between overflow-hidden rounded-full bg-cream pl-5 pr-1.5 text-[14px] font-semibold text-ink"
           >
-            <span className="relative z-10 whitespace-nowrap">Build this for me</span>
+            <span className="relative z-10 whitespace-nowrap">
+              Build this<span className="hidden sm:inline"> for me</span>
+            </span>
             <span className="relative z-10 grid size-9 place-items-center rounded-full bg-ink text-cream transition-transform duration-500 group-hover/btn:-rotate-45">
               <ArrowIcon className="size-4" />
             </span>
