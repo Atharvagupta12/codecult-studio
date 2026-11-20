@@ -23,8 +23,9 @@ src/
   components/
     hero/, sections/, ui/    landing page building blocks
     samples/                 sample websites (see src/components/samples/README.md)
-      shared/                demo bar, feature tour, open-now status
-      brew-lane/  kulhad-co/  ember/
+      shared/                demo bar, feature tour, open-now status, India clock
+      brew-lane/  kulhad-co/  ember/                       café samples
+      pulse-fitness/  ironpeak/  forge-athletics/          gym samples
   data/
     samples.ts               prices, tiers, the 12 sample cards
     hero-niches.ts           hero business picker

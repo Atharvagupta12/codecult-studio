@@ -16,11 +16,11 @@ Everything for one sample sits in three predictable places:
 | Niche | Essential ₹7,999 | Signature ₹9,999 | Premium ₹12,999 |
 | --- | --- | --- | --- |
 | Café | `brew-lane` (1 page) | `kulhad-co` (4 pages) | `ember` → route `ember-bistro` (6 pages) |
-| Gym | `pulse-fitness` | `ironpeak` | `forge-athletics` |
+| Gym | `pulse-fitness` (1 page) | `ironpeak` (4 pages) | `forge-athletics` (6 pages) |
 | Portfolio | `riya-sharma` | `kabir-rao` | `aarav-mehta` |
 | Beauty & jewellery | `glow-studio` | `kalaa-jewels` | `mehr-bridal` |
 
-Only the café row is built; the others show "Live demo coming soon" until `ready: true`.
+Café and gym rows are built; the others show "Live demo coming soon" until `ready: true`.
 
 ## Shared pieces (`shared/`)
 
@@ -29,6 +29,7 @@ Only the café row is built; the others show "Live demo coming soon" until `read
   the tour panel and the explainer sheet. Pass it a list of `TourItem`s.
 - `Feature` – wrap any part of a sample in `<Feature id="…" label="…">` so the tour can outline and scroll to it.
 - `useOpenStatus` – live "Open now · till 11 pm" status in Indian time (handles past-midnight closing).
+- `indiaTime` – `useIndiaNow()` (current weekday + minutes in India, for "live now / up next" schedules) and `fmtTime()`.
 
 Buttons that would contact the business (WhatsApp, call) call `useDemo().explain(...)` instead,
 which shows the visitor what would happen on their real site.
