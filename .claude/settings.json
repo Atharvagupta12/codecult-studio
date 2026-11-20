@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(Set-Location f:\\\\codecult_studio\\\\web\\\\node_modules\\\\next\\\\dist\\\\docs; Get-ChildItem -Recurse -File | ForEach-Object { $_.FullName.Replace\\(\\(Get-Location\\).Path + '\\\\', ''\\) } | Select-Object -First 400)",
+      "PowerShell($p = \\(Get-NetTCPConnection -LocalPort 3100 -State Listen -ErrorAction SilentlyContinue\\).OwningProcess; if \\($p\\) { Stop-Process -Id $p -Force -Confirm:$false }; Set-Location f:\\\\codecult_studio\\\\web; npx eslint src 2>&1 | Select-Object -First 20; npm run build 2>&1 | Select-Object -Last 25)",
+      "PowerShell($p = \\(Get-NetTCPConnection -LocalPort 3100 -State Listen -ErrorAction SilentlyContinue\\).OwningProcess; if \\($p\\) { Stop-Process -Id $p -Force -Confirm:$false }; Set-Location f:\\\\codecult_studio\\\\web; npx eslint src 2>&1 | Select-Object -First 20; npm run build 2>&1 | Select-String -Pattern \"rror|✓ Compiled|✓ Generating\")"
+    ]
+  }
+}
