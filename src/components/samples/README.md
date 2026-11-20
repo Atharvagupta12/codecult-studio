@@ -17,10 +17,10 @@ Everything for one sample sits in three predictable places:
 | --- | --- | --- | --- |
 | Café | `brew-lane` (1 page) | `kulhad-co` (4 pages) | `ember` → route `ember-bistro` (6 pages) |
 | Gym | `pulse-fitness` (1 page) | `ironpeak` (4 pages) | `forge-athletics` (6 pages) |
-| Portfolio | `riya-sharma` | `kabir-rao` | `aarav-mehta` |
+| Portfolio | `riya-sharma` (1 page) | `kabir-rao` (4 pages + case studies) | `aarav-mehta` (6 pages + story pages) |
 | Beauty & jewellery | `glow-studio` | `kalaa-jewels` | `mehr-bridal` |
 
-Café and gym rows are built; the others show "Live demo coming soon" until `ready: true`.
+Café, gym and portfolio rows are built; the others show "Live demo coming soon" until `ready: true`.
 
 ## Shared pieces (`shared/`)
 
@@ -41,5 +41,7 @@ which shows the visitor what would happen on their real site.
    Wrap with `<DemoProvider sample={getSample("<slug>")}>` and render `<DemoChrome tourItems={…} />`.
 3. Put photos in `public/images/<slug>/` (Unsplash, free licence).
 4. Set `ready: true` for the sample in `src/data/samples.ts`. The landing card links to the demo automatically.
+
+Dynamic pages (kabir-rao case studies, aarav-mehta stories) use `generateStaticParams` and read `params` inside `<Suspense>`, which Cache Components requires.
 
 Sample routes are `noindex` (see `src/app/samples/layout.tsx`) so these fictional businesses never show up on Google.

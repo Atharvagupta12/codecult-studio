@@ -26,6 +26,7 @@ src/
       shared/                demo bar, feature tour, open-now status, India clock
       brew-lane/  kulhad-co/  ember/                       café samples
       pulse-fitness/  ironpeak/  forge-athletics/          gym samples
+      riya-sharma/  kabir-rao/  aarav-mehta/               portfolio samples
   data/
     samples.ts               prices, tiers, the 12 sample cards
     hero-niches.ts           hero business picker

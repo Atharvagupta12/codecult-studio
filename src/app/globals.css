@@ -92,6 +92,11 @@ html.lenis body {
   100% { transform: translate(var(--drift, 0px), -110vh) scale(0.3); opacity: 0; }
 }
 
+/* Blinking terminal caret (kabir.dev sample) */
+@keyframes kr-blink {
+  50% { opacity: 0; }
+}
+
 /* Editorial background grid that fades out at the edges */
 .bg-rules {
   background-image: linear-gradient(to right, rgb(243 238 230 / 0.05) 1px, transparent 1px);
