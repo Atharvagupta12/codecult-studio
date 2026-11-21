@@ -97,6 +97,19 @@ html.lenis body {
   50% { opacity: 0; }
 }
 
+/* Gold sheen sweeping over jewellery (Kalaa Jewels sample) */
+@keyframes kj-sheen {
+  0% { background-position: 150% 0; }
+  60%, 100% { background-position: -50% 0; }
+}
+
+/* Falling rose petals (Mehr sample) */
+@keyframes mb-fall {
+  0% { transform: translate3d(0, -10vh, 0) rotate(0deg); opacity: 0; }
+  10% { opacity: 0.9; }
+  100% { transform: translate3d(var(--drift, 40px), 110vh, 0) rotate(540deg); opacity: 0; }
+}
+
 /* Editorial background grid that fades out at the edges */
 .bg-rules {
   background-image: linear-gradient(to right, rgb(243 238 230 / 0.05) 1px, transparent 1px);

@@ -18,9 +18,9 @@ Everything for one sample sits in three predictable places:
 | Café | `brew-lane` (1 page) | `kulhad-co` (4 pages) | `ember` → route `ember-bistro` (6 pages) |
 | Gym | `pulse-fitness` (1 page) | `ironpeak` (4 pages) | `forge-athletics` (6 pages) |
 | Portfolio | `riya-sharma` (1 page) | `kabir-rao` (4 pages + case studies) | `aarav-mehta` (6 pages + story pages) |
-| Beauty & jewellery | `glow-studio` | `kalaa-jewels` | `mehr-bridal` |
+| Beauty & jewellery | `glow-studio` (1 page) | `kalaa-jewels` (4 pages + wishlist) | `mehr-bridal` (6 pages) |
 
-Café, gym and portfolio rows are built; the others show "Live demo coming soon" until `ready: true`.
+All 12 samples are built and live.
 
 ## Shared pieces (`shared/`)
 
@@ -29,6 +29,7 @@ Café, gym and portfolio rows are built; the others show "Live demo coming soon"
   the tour panel and the explainer sheet. Pass it a list of `TourItem`s.
 - `Feature` – wrap any part of a sample in `<Feature id="…" label="…">` so the tour can outline and scroll to it.
 - `useOpenStatus` – live "Open now · till 11 pm" status in Indian time (handles past-midnight closing).
+- `Lightbox` – full-screen photo viewer (arrows, keyboard, swipe) used by aarav-mehta and mehr-bridal.
 - `indiaTime` – `useIndiaNow()` (current weekday + minutes in India, for "live now / up next" schedules) and `fmtTime()`.
 
 Buttons that would contact the business (WhatsApp, call) call `useDemo().explain(...)` instead,

@@ -5,7 +5,7 @@ import Image from "next/image";
 import { useState } from "react";
 import { Feature } from "../shared/Feature";
 import { AM, CATS, PHOTOS, type Cat } from "./data";
-import { Lightbox } from "./Lightbox";
+import { Lightbox } from "../shared/Lightbox";
 import { PageHead } from "./Shell";
 import { EASE, MONO } from "./shared";
 
@@ -65,7 +65,7 @@ export function AaravPortfolio() {
           </Feature>
         </div>
       </section>
-      <Lightbox photos={list} index={open} onClose={() => setOpen(null)} onIndex={setOpen} />
+      <Lightbox photos={list} index={open} onClose={() => setOpen(null)} onIndex={setOpen} accent={AM.gold} labelClass={MONO} />
     </main>
   );
 }

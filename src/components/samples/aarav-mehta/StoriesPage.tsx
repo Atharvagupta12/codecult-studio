@@ -6,7 +6,7 @@ import Link from "next/link";
 import { useRef, useState } from "react";
 import { Feature } from "../shared/Feature";
 import { AM, BASE, STORIES, type Story } from "./data";
-import { Lightbox } from "./Lightbox";
+import { Lightbox } from "../shared/Lightbox";
 import { PageHead } from "./Shell";
 import { Btn, Caption, Lines, MONO, SERIF, Up, useActions } from "./shared";
 
@@ -181,7 +181,7 @@ export function AaravStory({ story: s }: { story: Story }) {
         </Link>
       </section>
 
-      <Lightbox photos={all} index={open} onClose={() => setOpen(null)} onIndex={setOpen} />
+      <Lightbox photos={all} index={open} onClose={() => setOpen(null)} onIndex={setOpen} accent={AM.gold} labelClass={MONO} />
     </main>
   );
 }
