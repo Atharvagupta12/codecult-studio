@@ -1,17 +1,33 @@
 import type { Metadata, Viewport } from "next";
 import { geist, geistMono, instrument } from "@/lib/fonts";
 import { SmoothScroll } from "@/components/SmoothScroll";
+import { SEO, SITE_URL } from "@/lib/seo";
+import { SITE } from "@/lib/site";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "CodeCult Studio — Websites & WhatsApp + Google setup for businesses",
-  description:
-    "We design and develop stunning websites for cafés, gyms, salons, boutiques and creators. UI/UX design included at no extra cost. Live in 5–7 days. Based in Indore, working across India.",
+  metadataBase: new URL(SITE_URL),
+  title: SEO.title,
+  description: SEO.description,
+  keywords: SEO.keywords,
+  applicationName: SITE.name,
+  authors: [{ name: SITE.name, url: SITE_URL }],
+  creator: SITE.name,
+  publisher: SITE.name,
+  category: "technology",
+  formatDetection: { telephone: false, email: false, address: false },
+  robots: { index: true, follow: true, googleBot: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1 } },
   openGraph: {
-    title: "CodeCult Studio — Bring your business online",
-    description: "Pick a stunning ready design. We customise it for your business and go live in 5–7 days. UI/UX design included.",
+    title: SEO.ogTitle,
+    description: SEO.ogDescription,
+    siteName: SITE.name,
     type: "website",
+    locale: "en_IN",
+    url: "/",
   },
+  twitter: { card: "summary_large_image", title: SEO.ogTitle, description: SEO.ogDescription },
+  // After verifying the site in Google Search Console, paste the code here:
+  // verification: { google: "your-code" },
 };
 
 export const viewport: Viewport = {
@@ -20,7 +36,7 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${geist.variable} ${geistMono.variable} ${instrument.variable}`}>
+    <html lang="en-IN" className={`${geist.variable} ${geistMono.variable} ${instrument.variable}`}>
       <body>
         <SmoothScroll>{children}</SmoothScroll>
         <div aria-hidden className="grain" />

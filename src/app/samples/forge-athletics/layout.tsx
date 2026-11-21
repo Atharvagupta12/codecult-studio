@@ -4,11 +4,9 @@ import { ForgeShell } from "@/components/samples/forge-athletics/Shell";
 import { DemoChrome, type TourItem } from "@/components/samples/shared/DemoChrome";
 import { DemoProvider } from "@/components/samples/shared/DemoProvider";
 import { getSample } from "@/data/samples";
+import { sampleMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: { default: "FORGE Athletics · Strength & Conditioning Studio, Indore | Sample by CodeCult Studio", template: "%s · FORGE Athletics | Sample by CodeCult Studio" },
-  description: "Sample performance-gym website (Premium, ₹12,999) designed and built by CodeCult Studio.",
-};
+export const metadata: Metadata = sampleMetadata(getSample("forge-athletics"), { default: "FORGE Athletics · Strength & Conditioning Studio, Indore | Sample by CodeCult Studio", template: "%s · FORGE Athletics | Sample by CodeCult Studio" });
 
 const B = "/samples/forge-athletics";
 const TOUR: TourItem[] = [

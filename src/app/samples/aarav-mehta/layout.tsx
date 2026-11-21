@@ -3,11 +3,9 @@ import { AaravShell } from "@/components/samples/aarav-mehta/Shell";
 import { DemoChrome, type TourItem } from "@/components/samples/shared/DemoChrome";
 import { DemoProvider } from "@/components/samples/shared/DemoProvider";
 import { getSample } from "@/data/samples";
+import { sampleMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: { default: "Aarav Mehta · Wedding Photographer in Indore | Sample by CodeCult Studio", template: "%s · Aarav Mehta Photography | Sample by CodeCult Studio" },
-  description: "Sample wedding photographer website (Premium, ₹12,999) designed and built by CodeCult Studio.",
-};
+export const metadata: Metadata = sampleMetadata(getSample("aarav-mehta"), { default: "Aarav Mehta · Wedding Photographer in Indore | Sample by CodeCult Studio", template: "%s · Aarav Mehta Photography | Sample by CodeCult Studio" });
 
 const B = "/samples/aarav-mehta";
 const TOUR: TourItem[] = [

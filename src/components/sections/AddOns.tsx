@@ -4,7 +4,7 @@ import { AnimatePresence, motion, useInView, useReducedMotion } from "motion/rea
 import { useEffect, useRef, useState } from "react";
 import { SERVICES } from "@/data/samples";
 import { anton, cormorant, fraunces } from "@/lib/fonts";
-import { waLink } from "@/lib/site";
+import { WA, waLink } from "@/lib/site";
 import { ArrowUpRightIcon, CheckIcon } from "../ui/icons";
 import { Reveal } from "../ui/Reveal";
 import { GoogleG } from "./WhatsAppSetup";
@@ -22,15 +22,15 @@ export function AddOns() {
 
         <div className="mt-8 grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-3">
           <Tile className="md:col-span-2" price={SERVICES.seo} title="SEO setup" text="Titles, descriptions, Google Search Console and a sitemap, so Google understands your business and shows it properly." visual={<SeoVisual />} msg="SEO setup" />
-          <Tile price={SERVICES.logo} title="Logo design" text="A logo that looks great on your signboard, Instagram and menu." visual={<LogoVisual />} msg="logo design" />
-          <Tile price={SERVICES.poster} title="Posters & thumbnails" text="Offer posts, festival creatives, menus and YouTube thumbnails." visual={<PosterVisual />} msg="poster / thumbnail design" />
+          <Tile price={SERVICES.logo} title="Logo design" text="A logo that looks great on your signboard, Instagram and menu." visual={<LogoVisual />} msg="Logo design" />
+          <Tile price={SERVICES.poster} title="Posters & thumbnails" text="Offer posts, festival creatives, menus and YouTube thumbnails." visual={<PosterVisual />} msg="Poster / thumbnail design" />
           <Tile
             className="md:col-span-2"
             price={SERVICES.domain}
             title="Domain setup"
             text="Want us to handle the domain? We'll buy it in your name and connect it to your website. Domain price depends on the name."
             visual={<DomainVisual />}
-            msg="domain setup"
+            msg="Domain setup"
           />
         </div>
       </div>
@@ -42,7 +42,7 @@ function Tile({ className = "", price, title, text, visual, msg }: { className?:
   return (
     <Reveal className={className}>
       <a
-        href={waLink(`Hi CodeCult Studio! I'm interested in ${msg} (from ${price}).`)}
+        href={waLink(WA.addon(msg, price))}
         target="_blank"
         rel="noopener"
         className="group relative flex h-full flex-col overflow-hidden rounded-[22px] border border-line bg-ink-2 transition-colors duration-500 hover:border-cream/20 sm:rounded-[28px]"

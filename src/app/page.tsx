@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { FloatingWhatsApp } from "@/components/FloatingWhatsApp";
 import { Footer } from "@/components/Footer";
 import { Hero } from "@/components/hero/Hero";
@@ -13,10 +14,19 @@ import { Process } from "@/components/sections/Process";
 import { WhatsAppSetup } from "@/components/sections/WhatsAppSetup";
 import { WhyUs } from "@/components/sections/WhyUs";
 import { Work } from "@/components/sections/Work";
+import { businessJsonLd, faqJsonLd, websiteJsonLd } from "@/lib/seo";
+
+// Only the home page sets a canonical URL (child routes must not inherit it)
+export const metadata: Metadata = { alternates: { canonical: "/" } };
+
+const JSON_LD = [businessJsonLd(), websiteJsonLd(), faqJsonLd()];
 
 export default function Home() {
   return (
     <>
+      {JSON_LD.map((d, i) => (
+        <script key={i} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(d) }} />
+      ))}
       <Nav />
       <main>
         <Hero />

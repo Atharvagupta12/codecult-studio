@@ -4,7 +4,7 @@ import { AnimatePresence, motion, useInView, useReducedMotion } from "motion/rea
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import { SERVICES } from "@/data/samples";
-import { waLink } from "@/lib/site";
+import { WA, waLink } from "@/lib/site";
 import { ArrowIcon, CheckIcon, WhatsAppIcon } from "../ui/icons";
 import { Reveal } from "../ui/Reveal";
 import { SectionHeading } from "../ui/SectionHeading";
@@ -68,7 +68,7 @@ export function WhatsAppSetup() {
 
             <Reveal delay={0.25} className="mt-12 flex flex-wrap items-center gap-4">
               <a
-                href={waLink(`Hi CodeCult Studio! I want the WhatsApp Business + Google profile setup (${SERVICES.whatsappGoogle}).`)}
+                href={waLink(WA.whatsappGoogle(SERVICES.whatsappGoogle))}
                 target="_blank"
                 rel="noopener"
                 className="group inline-flex h-14 items-center gap-3 rounded-full bg-wa pl-6 pr-2 text-[16px] font-semibold text-ink transition-transform hover:scale-[1.02]"

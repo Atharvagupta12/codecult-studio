@@ -3,11 +3,9 @@ import { MehrShell } from "@/components/samples/mehr-bridal/Shell";
 import { DemoChrome, type TourItem } from "@/components/samples/shared/DemoChrome";
 import { DemoProvider } from "@/components/samples/shared/DemoProvider";
 import { getSample } from "@/data/samples";
+import { sampleMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: { default: "Mehr · Bridal Makeup Artist in Indore | Sample by CodeCult Studio", template: "%s · Mehr Bridal | Sample by CodeCult Studio" },
-  description: "Sample bridal makeup artist website (Premium, ₹12,999) designed and built by CodeCult Studio.",
-};
+export const metadata: Metadata = sampleMetadata(getSample("mehr-bridal"), { default: "Mehr · Bridal Makeup Artist in Indore | Sample by CodeCult Studio", template: "%s · Mehr Bridal | Sample by CodeCult Studio" });
 
 const B = "/samples/mehr-bridal";
 const TOUR: TourItem[] = [

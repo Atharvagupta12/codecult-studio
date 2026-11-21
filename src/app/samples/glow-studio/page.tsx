@@ -3,11 +3,9 @@ import { GlowStudio } from "@/components/samples/glow-studio/GlowStudio";
 import { DemoChrome, type TourItem } from "@/components/samples/shared/DemoChrome";
 import { DemoProvider } from "@/components/samples/shared/DemoProvider";
 import { getSample } from "@/data/samples";
+import { sampleMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Glow Studio · Hair, Skin & Bridal Salon in Indore | Sample by CodeCult Studio",
-  description: "Sample salon website (Essential, ₹7,999) designed and built by CodeCult Studio.",
-};
+export const metadata: Metadata = sampleMetadata(getSample("glow-studio"), "Glow Studio · Hair, Skin & Bridal Salon in Indore | Sample by CodeCult Studio");
 
 const TOUR: TourItem[] = [
   { id: "visit-builder", label: "Build your visit: prices + time add up live" },

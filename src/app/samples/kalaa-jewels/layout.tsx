@@ -3,11 +3,9 @@ import { KalaaShell } from "@/components/samples/kalaa-jewels/Shell";
 import { DemoChrome, type TourItem } from "@/components/samples/shared/DemoChrome";
 import { DemoProvider } from "@/components/samples/shared/DemoProvider";
 import { getSample } from "@/data/samples";
+import { sampleMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: { default: "Kalaa Jewels · Handcrafted Jewellery in Indore | Sample by CodeCult Studio", template: "%s · Kalaa Jewels | Sample by CodeCult Studio" },
-  description: "Sample jewellery store website (Signature, ₹9,999) designed and built by CodeCult Studio.",
-};
+export const metadata: Metadata = sampleMetadata(getSample("kalaa-jewels"), { default: "Kalaa Jewels · Handcrafted Jewellery in Indore | Sample by CodeCult Studio", template: "%s · Kalaa Jewels | Sample by CodeCult Studio" });
 
 const B = "/samples/kalaa-jewels";
 const TOUR: TourItem[] = [

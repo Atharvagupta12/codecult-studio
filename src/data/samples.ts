@@ -12,6 +12,7 @@ import {
   syne,
   unbounded,
 } from "@/lib/fonts";
+import { WA } from "@/lib/site";
 
 /* ───────────────────────── Tiers (one place to change prices) ───────────────────────── */
 
@@ -402,5 +403,5 @@ export function getSample(slug: string) {
 }
 
 export function buildThisMessage(s: SampleSite) {
-  return `Hi CodeCult Studio! I love the "${s.name}" ${s.kind.toLowerCase()} design (${s.tier}, ${TIERS[s.tier].price}). I want a website like this for my business.`;
+  return WA.sample({ name: s.name, kind: s.kind, tier: s.tier, price: TIERS[s.tier].price, days: TIERS[s.tier].days });
 }

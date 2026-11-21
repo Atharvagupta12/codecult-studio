@@ -4,7 +4,7 @@ import { Reveal } from "../ui/Reveal";
 import { ScrollWords } from "../ui/ScrollWords";
 import { SnapCarousel } from "../ui/CarouselDots";
 
-// TODO(content): Replace with the real CodeCult community story (start date, what it did, members, founders).
+// The CodeCult story (approved by the founder, Nov 2026).
 const MANIFESTO =
   "CodeCult started as a community of people who love building for the web. We learned together, shipped projects together and pushed each other to get better. Now we're turning that energy into a studio, so local businesses get the same craft and care that big brands do.";
 

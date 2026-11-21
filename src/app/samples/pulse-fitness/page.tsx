@@ -3,11 +3,9 @@ import { PulseFitness } from "@/components/samples/pulse-fitness/PulseFitness";
 import { DemoChrome, type TourItem } from "@/components/samples/shared/DemoChrome";
 import { DemoProvider } from "@/components/samples/shared/DemoProvider";
 import { getSample } from "@/data/samples";
+import { sampleMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Pulse Fitness Club · Gym in Saket Nagar, Indore | Sample by CodeCult Studio",
-  description: "Sample gym website (Essential, ₹7,999) designed and built by CodeCult Studio.",
-};
+export const metadata: Metadata = sampleMetadata(getSample("pulse-fitness"), "Pulse Fitness Club · Gym in Saket Nagar, Indore | Sample by CodeCult Studio");
 
 const TOUR: TourItem[] = [
   { id: "trial", label: "Free-trial booking on WhatsApp" },

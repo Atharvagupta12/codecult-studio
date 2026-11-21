@@ -3,11 +3,9 @@ import { RiyaSharma } from "@/components/samples/riya-sharma/RiyaSharma";
 import { DemoChrome, type TourItem } from "@/components/samples/shared/DemoChrome";
 import { DemoProvider } from "@/components/samples/shared/DemoProvider";
 import { getSample } from "@/data/samples";
+import { sampleMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Riya Sharma · Brand & UI Designer, Indore | Sample by CodeCult Studio",
-  description: "Sample designer portfolio (Essential, ₹7,999) designed and built by CodeCult Studio.",
-};
+export const metadata: Metadata = sampleMetadata(getSample("riya-sharma"), "Riya Sharma · Brand & UI Designer, Indore | Sample by CodeCult Studio");
 
 const TOUR: TourItem[] = [
   { id: "work", label: "Project gallery → click for case studies" },

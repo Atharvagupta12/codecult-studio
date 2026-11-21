@@ -1,4 +1,4 @@
-import { waLink } from "@/lib/site";
+import { WA, waLink } from "@/lib/site";
 import { ArrowIcon } from "../ui/icons";
 import { Magnetic } from "../ui/Magnetic";
 import { Reveal, RiseText } from "../ui/Reveal";
@@ -55,7 +55,7 @@ export function CustomBand() {
           <Reveal delay={0.3} className="mt-12">
             <Magnetic>
               <a
-                href={waLink("Hi CodeCult Studio! I have an idea for a custom website. Can we talk?")}
+                href={waLink(WA.custom())}
                 target="_blank"
                 rel="noopener"
                 className="group inline-flex h-16 items-center gap-4 rounded-full bg-ink pl-8 pr-2 text-[17px] font-semibold text-cream"

@@ -1,5 +1,5 @@
 import { SERVICES, TIERS, type Tier } from "@/data/samples";
-import { waLink } from "@/lib/site";
+import { WA, waLink } from "@/lib/site";
 import { SnapCarousel } from "../ui/CarouselDots";
 import { CountUp } from "../ui/CountUp";
 import { ArrowIcon, CheckIcon } from "../ui/icons";
@@ -141,7 +141,7 @@ export function Pricing() {
             <Reveal delay={0.1}>
               <div className="flex h-full flex-col justify-between gap-4 rounded-[24px] border border-ink/10 bg-white/60 p-7 sm:p-8">
                 <p className="text-[18px] font-medium">50% to start, 50% when you&apos;re live.</p>
-                <a href={waLink("Hi CodeCult Studio! I have a question about your pricing.")} target="_blank" rel="noopener" className="group inline-flex items-center gap-2 text-[15px] font-semibold">
+                <a href={waLink(WA.question("your pricing"))} target="_blank" rel="noopener" className="group inline-flex items-center gap-2 text-[15px] font-semibold">
                   Questions about pricing? Ask on WhatsApp
                   <ArrowIcon className="size-4 text-ember transition-transform group-hover:translate-x-1" />
                 </a>

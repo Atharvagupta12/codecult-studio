@@ -3,11 +3,9 @@ import { DemoChrome, type TourItem } from "@/components/samples/shared/DemoChrom
 import { DemoProvider } from "@/components/samples/shared/DemoProvider";
 import { BrewLane } from "@/components/samples/brew-lane/BrewLane";
 import { getSample } from "@/data/samples";
+import { sampleMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Brew Lane · Specialty Coffee in Vijay Nagar, Indore | Sample by CodeCult Studio",
-  description: "Sample café website (Essential, ₹7,999) designed and built by CodeCult Studio.",
-};
+export const metadata: Metadata = sampleMetadata(getSample("brew-lane"), "Brew Lane · Specialty Coffee in Vijay Nagar, Indore | Sample by CodeCult Studio");
 
 const TOUR: TourItem[] = [
   { id: "open", label: "Live open / closed status" },

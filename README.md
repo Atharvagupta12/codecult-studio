@@ -49,6 +49,11 @@ public/images/
 | WhatsApp number, Instagram, location | `src/lib/site.ts` |
 | Landing page sections | `src/components/sections/*` |
 
-## Still to fill in
+## SEO & sharing
 
-- Real CodeCult community story: `src/components/sections/About.tsx` (marked `TODO(content)`).
+- `src/app/robots.ts`, `src/app/sitemap.ts`: crawl rules and sitemap (only the CodeCult page is indexed; samples are `noindex`).
+- `src/lib/seo.ts`: site URL, keywords, JSON-LD for the business and FAQ.
+- Link-preview images: `src/app/opengraph-image.jpg` and one per sample in `src/app/samples/<slug>/`.
+  These are screenshots of each site on a branded card (1200×630 JPG); re-take them if a design changes.
+- Site URL: Vercel production URL by default. After buying a domain, add it in Vercel (it becomes the production URL automatically)
+  or set `NEXT_PUBLIC_SITE_URL`.

@@ -3,11 +3,9 @@ import { KabirShell } from "@/components/samples/kabir-rao/Shell";
 import { DemoChrome, type TourItem } from "@/components/samples/shared/DemoChrome";
 import { DemoProvider } from "@/components/samples/shared/DemoProvider";
 import { getSample } from "@/data/samples";
+import { sampleMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: { default: "Kabir Rao · Full-stack Developer | Sample by CodeCult Studio", template: "%s · kabir.dev | Sample by CodeCult Studio" },
-  description: "Sample developer portfolio (Signature, ₹9,999) designed and built by CodeCult Studio.",
-};
+export const metadata: Metadata = sampleMetadata(getSample("kabir-rao"), { default: "Kabir Rao · Full-stack Developer | Sample by CodeCult Studio", template: "%s · kabir.dev | Sample by CodeCult Studio" });
 
 const B = "/samples/kabir-rao";
 const TOUR: TourItem[] = [
